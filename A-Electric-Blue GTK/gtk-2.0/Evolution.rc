@@ -1,0 +1,89 @@
+style "evolution-info" = "default"
+{
+	bg[ACTIVE]	= @bg_color
+
+	engine "pixmap"
+	{
+		image
+		{
+			function	= FLAT_BOX
+			file		= "Images/evoinfobg.png"
+		}
+	}
+}
+
+style "evobutton" = "button"
+{
+	bg[NORMAL]	= "#f7f7f7"
+	engine "pixmap"
+	{	
+		image
+		{
+			function	= FLAT_BOX
+		}
+	}
+}
+
+style "evolution-statusbar"
+{
+	engine "pixmap"
+	{
+		image
+		{
+			function	= FLAT_BOX
+			file		= "Images/evostatbarbg.png"
+		}
+	}
+}
+
+style "efilterbar"
+{
+	engine  "pixmap"
+	{
+		image
+		{
+			function	= FLAT_BOX
+			file		= "Images/evotool.png"
+		}
+
+		image
+		{
+			function	= BOX
+			file		= "Images/evotool.png"
+		}
+	}
+}
+
+
+style "evolution-listheader"
+{	GtkButton	::inner-border		= {0,0,0,0}
+
+
+	fg[NORMAL]	= @selected_fg_color
+
+	engine "pixmap"
+	{
+		image
+		{
+			function	= BOX
+		}
+	}
+}
+
+##Evolution
+#statusbar
+widget_class	"*EShellWindow.*BonoboDock.*GtkHBox.*BonoboWidget.*" style "evolution-statusbar"
+#Shadow Flat on menubars
+widget_class	"EShellWindow.*BonoboDockBand*"			style "toolbar"
+widget_class	"EShellWindow.*BonoboDockBand.*InternalToolbar.*"	style "button"
+widget_class	"EShellWindow.*BonoboDockBand.*InternalToolbar.*.BonoboWidget.*"	style "evobutton"
+widget_class	"EShellWindow.*BonoboDockBand*.GtkMenuBar*"	style "menubar"
+widget_class	"EShellWindow*.ECanvas"				style:highest "evolution-listheader"
+#Infolabel with bg color
+widget_class	"*EInfoLabel*"					style "evolution-info"
+widget_class	"*.ESidebar.*.BonoboPlug"					style "evolution-info"
+#inside scrolledwindow
+widget_class	"*EMFolderBrowser*GtkScrolledWindow.*"		style "insidescrlld"
+#fix for button on RSS view
+widget_class	"*EMFolderBrowser*GtkScrolledWindow.*GtkButton*" style "default"
+widget_class 	"*EFilterBar"					style "efilterbar"

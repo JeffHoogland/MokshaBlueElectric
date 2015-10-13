@@ -1,0 +1,255 @@
+style "menubar"
+{
+	ythickness = 0
+	engine "pixmap"
+	{
+
+		image
+		{
+			function	= SHADOW
+		}
+
+		image
+		{
+			function	= BOX
+			file		= "Images/null.png"
+			stretch		= TRUE
+			state		= PRELIGHT
+			recolorable	= TRUE
+		}
+
+		image
+		{
+			function	= BOX
+			file		= "Images/null.png"
+			stretch		= TRUE
+			state		= NORMAL
+			recolorable	= TRUE
+		}
+
+		image
+		{
+			function	= BOX
+			file		= "Images/null.png"
+			stretch		= TRUE
+			state		= ACTIVE
+			recolorable	= TRUE
+		}
+		image
+		{
+			function	= BOX
+			file		= "Images/null.png"
+			stretch		= TRUE
+			state		= INSENSITIVE
+			recolorable	= TRUE
+		}
+	}
+}
+
+style "menu"
+{	
+	engine "pixmap"
+	{
+		image
+		{
+			function	= BOX
+			file		= "Images/Menu/menu.png"
+			border		= {6,6,6,6}
+			stretch		= TRUE
+		}
+	}
+}
+
+style "menuitem"
+{
+	fg[PRELIGHT]	= "#ffffff"
+
+	engine "pixmap"
+	{
+		image
+		{	function	= BOX
+			file		= "Images/Menu/select.png"
+			border		= {5,5,5,5}
+			stretch		= TRUE
+		}
+
+		image
+		{	function	= ARROW
+			state		= PRELIGHT
+			file		= "Images/null.png"
+			overlay_file	= "Images/Menu/right2.png"
+			overlay_stretch	= FALSE
+			arrow_direction	= RIGHT
+		}
+
+		image
+		{
+			function	= ARROW
+			recolorable	= TRUE
+			overlay_file	= "Images/right.png"
+			overlay_stretch	= FALSE
+			arrow_direction	= RIGHT
+		}
+
+		image
+		{
+			function	= OPTION
+			recolorable	= TRUE
+            		state		= NORMAL
+            		shadow		= OUT
+            		overlay_file	= "Images/Menu/radio1.png"
+            		overlay_stretch	= FALSE
+        	}
+
+		image
+		{
+			function	= OPTION
+			recolorable	= TRUE
+            		state		= PRELIGHT
+            		shadow		= OUT
+            		overlay_file	= "Images/Menu/radio1.png"
+            		overlay_stretch	= FALSE
+        	}
+		
+		image
+		{
+			function	= OPTION
+			recolorable	= TRUE
+            		state		= ACTIVE
+            		shadow		= OUT
+            		overlay_file	= "Images/Menu/radio1.png"
+            		overlay_stretch	= FALSE
+        	}
+
+		image
+		{
+			function	= OPTION
+			recolorable	= TRUE
+            		state		= INSENSITIVE
+            		shadow		= OUT
+            		overlay_file	= "Images/Menu/radio1.png"
+            		overlay_stretch	= FALSE
+        	}
+		
+		image
+		{
+			function	= OPTION
+			recolorable	= TRUE
+            		state		= NORMAL
+            		shadow		= IN
+            		overlay_file	= "Images/Menu/radio2.png"
+            		overlay_stretch	= FALSE
+        	}
+
+		image
+		{
+			function	= OPTION
+			recolorable	= TRUE
+            		state		= PRELIGHT
+            		shadow		= IN
+            		overlay_file	= "Images/Menu/radio2b.png"
+            		overlay_stretch	= FALSE
+        	}
+		
+		image
+		{
+			function	= OPTION
+			recolorable	= TRUE
+            		state		= ACTIVE
+            		shadow		= IN
+            		overlay_file	= "Images/Menu/radio2.png"
+            		overlay_stretch	= FALSE
+        	}
+
+		image
+		{
+			function	= OPTION
+			recolorable	= TRUE
+            		state		= INSENSITIVE
+            		shadow		= IN
+            		overlay_file	= "Images/Menu/radio2.png"
+            		overlay_stretch	= FALSE
+        	}
+
+		image 
+		{
+			function	= CHECK
+	    		recolorable	= TRUE
+			state		= NORMAL
+			shadow		= OUT
+	    		overlay_file	= "Images/Menu/check1.png"
+			overlay_stretch	= FALSE
+		}
+
+		image
+		{
+			function	= CHECK
+	    		recolorable	= TRUE
+			state		= ACTIVE
+			shadow		= OUT
+	    		overlay_file	= "Images/Menu/check1.png"
+			overlay_stretch	= FALSE
+		}
+
+		image
+		{
+			function	= CHECK
+	    		recolorable	= TRUE
+			state		= PRELIGHT
+			shadow		= OUT
+	    		overlay_file	= "Images/Menu/check1.png"
+			overlay_stretch	= FALSE
+		}
+
+		image
+		{
+			function	= CHECK
+	    		recolorable	= TRUE
+			state		= INSENSITIVE
+			shadow		= OUT
+	    		overlay_file	= "Images/Menu/check1.png"
+			overlay_stretch	= FALSE
+		}
+
+		image 
+		{
+			function	= CHECK
+	    		recolorable	= TRUE
+			state		= NORMAL
+			shadow		= IN
+	    		overlay_file	= "Images/Menu/check2.png"
+			overlay_stretch	= FALSE
+		}
+
+		image
+		{
+			function	= CHECK
+	    		recolorable	= TRUE
+			state		= ACTIVE
+			shadow		= IN
+	    		overlay_file	= "Images/Menu/check2.png"
+			overlay_stretch	= FALSE
+		}
+
+		image
+		{
+			function	= CHECK
+	    		recolorable	= TRUE
+			state		= PRELIGHT
+			shadow		= IN
+	    		overlay_file	= "Images/Menu/check2b.png"
+			overlay_stretch	= FALSE
+		}
+
+		image
+		{
+			function	= CHECK
+	    		recolorable	= TRUE
+			state		= INSENSITIVE
+			shadow		= IN
+	    		overlay_file	= "Images/Menu/check2.png"
+			overlay_stretch	= FALSE
+		}
+	
+	}
+}

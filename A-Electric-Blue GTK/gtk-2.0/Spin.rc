@@ -1,0 +1,143 @@
+style "spin"
+{	
+	GtkWidget::focus-line-width		= 0
+	
+	base[INSENSITIVE]			= @base_color
+	base[NORMAL]				= @base_color
+	base[SELECTED]				= @selected_bg_color
+	base[ACTIVE]				= @selected_bg_color
+
+	GtkSpinButton::inner-border		= { 0, 0, 0, 0}
+
+	engine "pixmap"
+	{
+		image
+		{
+			function	= ARROW
+			recolorable	= TRUE
+			overlay_file	= "Images/Spin/down1.png"
+			overlay_stretch	= FALSE
+			arrow_direction	= DOWN
+		}
+
+		image
+		{
+			function	= ARROW
+			recolorable	= TRUE
+			overlay_file	= "Images/Spin/up1.png"
+			overlay_stretch	= FALSE
+			arrow_direction	= UP
+		}
+
+		image
+		{
+			function	= FLAT_BOX
+			file		= "Images/Spin/box0.png"
+			border		= {6,6,6,6}
+		}
+
+		image
+		{
+			function	= FOCUS
+			file		= "Images/null.png"
+			stretch		= TRUE
+			recolorable	= TRUE
+		}
+
+		image
+		{
+			function	= SHADOW
+			file		= "Images/Spin/entry.png"
+			border		= {6,6,6,6}
+			stretch		= TRUE
+			state		= NORMAL
+			shadow		= IN
+		}
+
+		image
+  		{
+			function	= BOX
+			state		= NORMAL
+      			detail		= "spinbutton_up"
+			recolorable	= TRUE
+			file		= "Images/Spin/bgup1.png"
+			border		= { 6, 6, 6, 6}
+			stretch		= TRUE
+		}
+
+		image
+  		{
+			function	= BOX
+			state		= PRELIGHT
+      			detail		= "spinbutton_up"
+			recolorable	= TRUE
+			file		= "Images/Spin/bgup1.png"
+			border		= { 6, 6, 6, 6}
+			stretch		= TRUE
+		}
+
+		image
+  		{
+			function	= BOX
+			state		= INSENSITIVE
+      			detail		= "spinbutton_up"
+			recolorable	= TRUE
+			file		= "Images/Spin/bgup1.png"
+			border		= { 6, 6, 6, 6}
+			stretch		= TRUE
+		}
+
+		image
+  		{
+			function	= BOX
+			state		= ACTIVE
+      			detail		= "spinbutton_up"
+			recolorable	= TRUE
+			file		= "Images/Spin/bgup1.png"
+			border		= { 6, 6, 6, 6}
+			stretch		= TRUE
+		}
+
+		image
+  		{
+			function	= BOX
+			state		= NORMAL
+      			detail		= "spinbutton_down"
+			recolorable	= TRUE
+			file		= "Images/Spin/bgdown1.png"
+			border		= { 6, 6, 6, 6}
+			stretch		= TRUE
+		}
+		image
+  		{
+			function	= BOX
+			state		= PRELIGHT
+      			detail		= "spinbutton_down"
+			recolorable	= TRUE
+			file		= "Images/Spin/bgdown1.png"
+			border		= { 6, 6, 6, 6}
+			stretch		= TRUE
+		}
+		image
+  		{
+			function	= BOX
+			state		= ACTIVE
+      			detail		= "spinbutton_down"
+			recolorable	= TRUE
+			file		= "Images/Spin/bgdown1.png"
+			border		= { 6, 6, 6, 6}
+			stretch		= TRUE
+		}
+		image
+  		{
+			function	= BOX
+			state		= INSENSITIVE
+      			detail		= "spinbutton_down"
+			recolorable	= TRUE
+			file		= "Images/Spin/bgdown1.png"
+			border		= { 6, 6, 6, 6}
+			stretch		= TRUE
+		}
+
+	}
+}

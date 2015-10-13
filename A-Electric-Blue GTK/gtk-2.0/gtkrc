@@ -1,0 +1,523 @@
+#=======================================#
+#	A-Electric-Blue GTK		#
+#	    				#
+#   Pixmap theme for A-Electric-Blue	#
+#					#
+#Made by Alberto "nerduma" Verdoja	#
+#		pimpmylinux@email.it	#
+#=======================================#
+
+gtk_color_scheme = "fg_color:#000000\nbg_color:#EDF0FE\nbase_color:#ffffff\ntext_color:#000000\nselected_bg_color:#D2D2D2\nselected_fg_color:#404040\ntooltip_bg_color:#dddddd\ntooltip_fg_color:#000000\nfg_tabcolor:#000000\nfg_selected_tabcolor:#ffffff"
+
+style "default"
+{
+	GtkScrolledWindow	:: scrollbars-within-bevel	= 0
+	GtkScrolledWindow	:: scrollbar-spacing		= 1
+	GtkScrolledWindow	:: shadow_type			= GTK_SHADOW_OUT
+
+	GtkNotebook	::shadow_type		= GTK_SHADOW_NONE
+
+	GtkToolBar	::shadow_type		= GTK_SHADOW_NONE
+
+	GtkMenuBar	::shadow_type		= GTK_SHADOW_NONE
+
+	GtkStatusbar	::shadow_type		= GTK_SHADOW_NONE
+
+	GtkPaned	::handle-size		= 8
+
+	GtkExpander	::expander-size		= 8
+	GtkTreeView	::expander-size		= 8
+
+
+	GtkMenu		::horizontal-offset	= 0
+	GtkMenu		::arrow-scaling		= 2
+	GtkMenu		::horizontal-padding	= 0
+	GtkMenu		::vertical-padding	= 3
+
+	GtkMenuItem	::toggle-spacing	= 10
+
+	
+	GtkRange	::slider-width		= 23
+	GtkRange	::activate_slider	= 1
+
+	GtkTreeView	::allow-rules		= 1
+	GtkTreeView	::row-ending-details	= 1
+
+	GtkScrollbar	::trough-under-steppers	= 0
+
+
+
+	bg[NORMAL]       	= @bg_color
+	bg[ACTIVE]       	= shade (1.0233,@bg_color)
+	bg[PRELIGHT]      	= @bg_color
+	bg[SELECTED]      	= @selected_bg_color
+	bg[INSENSITIVE]  	= shade (1.03,@bg_color)
+
+	fg[NORMAL]       	= @fg_color
+	fg[ACTIVE]       	= @fg_color
+	fg[PRELIGHT]     	= @fg_color
+	fg[SELECTED]     	= @selected_fg_color
+	fg[INSENSITIVE]  	= mix (0.5,"#ffffff",@fg_color)
+
+	base[NORMAL]     	=  @base_color
+	base[ACTIVE]     	=  @selected_bg_color
+	base[PRELIGHT]   	=  @base_color
+	base[SELECTED]  	=  @selected_bg_color
+	base[INSENSITIVE]	=  @base_color
+
+	text[NORMAL]     	=  @text_color
+	text[ACTIVE]      	=  @text_color
+	text[PRELIGHT]   	=  @text_color
+	text[SELECTED]   	=  @text_color
+	text[INSENSITIVE]	=  mix (0.5,"#ffffff",@fg_color)
+
+	engine "pixmap"
+	{
+		image
+		{
+			function	= HLINE
+			file		= "Images/Lines/hline.png"
+			border		= {1,1,1,1}
+			stretch		= TRUE
+			recolorable	= TRUE
+		}
+
+		image
+		{
+			function	= FOCUS
+			file		= "Images/null.png"
+			border		= {5, 5, 5, 5}
+			stretch		= TRUE
+			recolorable	= TRUE
+		}
+
+		image
+		{
+			function	= VLINE
+			file		= "Images/Lines/vline.png"
+			border		= {1,1,1,1}
+			stretch		= TRUE
+			recolorable	= TRUE
+		}
+		image
+		{	function	= HANDLE
+			overlay_file	= "Images/handleV.png"
+			overlay_stretch	= FALSE
+			orientation	= VERTICAL
+		}
+		image
+		{	function	= HANDLE
+			overlay_file	= "Images/handleH.png"
+			overlay_stretch	= FALSE
+			orientation	= HORIZONTAL
+		}	
+
+		image
+		{
+			function	= RESIZE_GRIP
+			recolorable	= TRUE
+			overlay_file	= "Images/rgrip.png"
+			overlay_border	= { 0, 5, 0, 4 }
+			overlay_stretch	= TRUE
+		}
+
+		image
+		{
+			function	= SHADOW
+			shadow		= IN
+			file		= "Images/Shadows/frame.png"
+			border		= {4, 4, 4, 4}
+		}
+		image
+		{
+			function	= SHADOW
+			shadow		= ETCHED_IN
+			file		= "Images/Shadows/frame.png"
+			border		= {4, 4, 4, 4}
+		}
+		image
+		{
+			function	= SHADOW
+			shadow		= OUT
+			file		= "Images/Shadows/frame.png"
+			border		= {4, 4, 4, 4}
+		}
+		image
+		{
+			function	= SHADOW
+			shadow		= ETCHED_OUT
+			file		= "Images/Shadows/frame.png"
+			border		= {4, 4, 4, 4}
+		}
+		image
+		{
+			function	= ARROW
+			recolorable	= TRUE
+			file		= "Images/null.png"
+			overlay_file	= "Images/right.png"
+			stretch		= TRUE
+			arrow_direction	= RIGHT
+		}
+
+		image
+		{
+			function	= ARROW
+			recolorable	= TRUE
+			file		= "Images/null.png"
+			overlay_file	= "Images/left.png"
+			stretch		= TRUE
+			arrow_direction	= LEFT
+		}
+
+		image
+		{
+			function	= ARROW
+			recolorable	= TRUE
+			file		= "Images/null.png"
+			overlay_file	= "Images/up.png"
+			stretch		= TRUE
+			arrow_direction	= UP
+		}
+
+		image
+		{
+			function	= ARROW
+			recolorable	= TRUE
+			file		= "Images/null.png"
+			overlay_file	= "Images/down.png"
+			stretch		= TRUE
+			arrow_direction	= DOWN
+		}
+		image
+		{
+			function	= EXPANDER
+			file		= "Images/Expanders/collapse1.png"
+			expander_style	= COLLAPSED
+		}
+
+		image
+		{
+			function	= EXPANDER
+			file		= "Images/Expanders/scollapse1.png"
+			expander_style	= SEMI_COLLAPSED
+		}
+
+		image
+		{
+			function	= EXPANDER
+			file		= "Images/Expanders/sexpanded1.png"
+			expander_style	= SEMI_EXPANDED
+		}
+		image
+		{
+			function	= EXPANDER
+			file		= "Images/Expanders/expanded1.png"
+			expander_style	= EXPANDED
+		}
+	}
+}
+
+style "noshdw" = "default"
+{
+	engine "pixmap"
+	{
+		image
+		{
+			function	= SHADOW
+		}
+	}
+}
+
+style "frame"
+{
+	engine "pixmap"
+	{
+		image
+		{
+			function	= SHADOW_GAP
+	    		recolorable	= TRUE
+	    		file		= "Images/Shadows/frame.png"
+	    		border		= {8, 8, 8, 8}
+	    		stretch		= TRUE
+	    		gap_start_file	= "Images/Shadows/frame-gap-start.png"
+	    		gap_start_border= { 4, 0, 4, 0}
+	    		gap_end_file	= "Images/Shadows/frame-gap-end.png"
+	    		gap_end_border	= { 0, 4, 4, 0}
+	    		gap_side	= TOP
+		}
+
+	}
+}
+
+style "nautilus-sidebar"
+{
+	base[NORMAL]		= @bg_color
+	text[NORMAL]		= @fg_color
+	text[SELECTED]		= @selected_fg_color
+	text[ACTIVE]		= @selected_fg_color
+	engine "pixmap"
+	{
+		image
+		{
+			function	= FLAT_BOX
+			state		= SELECTED
+			recolorable	= TRUE
+			file		= "Images/Tree/selected.png"
+			border		= {6, 6, 6, 6}
+		}
+
+		image
+		{
+			function	= FLAT_BOX
+			state		= NORMAL
+			recolorable	= TRUE
+			file		= "Images/null.png"
+			border		= {9, 13, 1, 1}
+		}
+		
+		image
+		{
+			function	= SHADOW
+			shadow		= IN
+			file		= "Images/Shadows/shadow-etched-in.png"
+			border		= {9, 9, 9, 9}
+		}
+		image
+		{
+			function	= SHADOW
+			shadow		= ETCHED_IN
+			file		= "Images/Shadows/shadow-etched-in.png"
+			border		= {9, 9, 9, 9}
+		}
+	}
+}
+
+style "textview"
+{
+	xthickness	= 7
+	ythickness	= 7
+
+	engine "pixmap"
+	{
+		image
+		{
+			function	= SHADOW	
+			file		= "Images/Shadows/shadow-etched-in.png"
+			#shadow		= IN
+		}
+		
+		image
+		{
+			function	= SHADOW
+			shadow		= ETCHED_IN
+			file		= "Images/Shadows/shadow-etched-in.png"
+			border		= {4, 4, 4, 4}
+		}
+	}
+}
+
+style "midori-progress"
+{
+	engine "pixmap"
+	{
+		image
+		{
+			file		= "Images/Shadows/frame.png"
+		}
+
+		image
+		{
+			function	= SHADOW
+			shadow		= ETCHED_OUT
+			file		= "Images/Shadows/frame.png"
+		}
+
+		image
+		{
+			function	= SHADOW
+			shadow		= OUT
+			file		= "Images/Shadows/frame.png"
+		}
+	}
+}
+
+style "evolution-info" = "default"
+{
+	bg[ACTIVE]	= @bg_color
+}
+
+style "gimp-viewport"
+{
+	fg[NORMAL]	= @fg_color
+	fg[ACTIVE]	= @fg_color
+	fg[PRELIGHT]	= @fg_color
+
+	bg[PRELIGHT]	= mix(0.90, shade (1.1,@bg_color), @selected_bg_color)
+}
+
+style "status"
+{
+	engine "pixmap"
+	{
+		image
+		{
+			function	= SHADOW
+		}
+
+		image
+		{
+			function	= FLAT_BOX
+		}
+	}
+}
+
+style "combo"
+{
+
+	text[NORMAL]	= @fg_color
+	text[ACTIVE]	= @fg_color
+	text[PRELIGHT]	= @fg_color
+	text[SELECTED]	= "#ffffff"
+	fg[SELECTED]	= "#ffffff"
+
+	engine "pixmap"
+	{
+		image
+		{
+			function	= ARROW
+			recolorable	= TRUE
+			file		= "Images/null.png"
+			overlay_file	= "Images/down.png"
+			overlay_stretch	= FALSE
+			arrow_direction	= DOWN
+		}
+	}
+}
+
+style "evo-entry"
+{
+	engine "pixmap"
+	{
+		image
+		{
+			function	= FLAT_BOX
+		}
+	}
+}
+
+style "tooltip"
+{
+	engine "pixmap"
+	{
+		image
+		{
+			function	= FLAT_BOX
+			file		= "Images/tooltip.png"
+			border		= {1, 1, 1, 1}
+		}
+	}
+}
+
+class "GtkWidget"	style "default"
+
+include "RadioCheck.rc"
+include "Button.rc"
+include "Scrollbar.rc"
+include "Progress.rc"
+include "Menu.rc"
+include "Tab.rc"
+include "Scrolled.rc"
+include "Entry.rc"
+include "Range.rc"
+include "Tree.rc"
+include "Spin.rc"
+
+##Flat Toolbar
+widget_class "*GtkToolbar*"		style "noshdw"
+
+##Shadow on entry on toolbar
+widget_class "*GtkToolbar.*"	style "default"
+widget_class "*GtkToolbar.*GtkEntry"	style "entry"
+
+class "GtkNotebook"	style "tab"
+class "GtkButton"	style "button"
+class "GtkCheckButton"	style "radioCheck"
+class "GtkRadioButton"	style "radioCheck"
+class "GtkFrame"	style "frame"
+class "GtkScrollbar"	style "scrollbar"
+class "GtkProgressBar"	style "progress"
+class "GtkMenu"		style "menu"
+class "GtkMenuItem"	style "menuitem"
+class "GtkEntry"	style "entry"
+class "GtkRange"	style "range"
+class "GtkItem"		style "menuitem"
+class "GtkTreeView"	style "tree"
+class "GtkHandleBox"	style "noshdw"
+class "GtkTextView"	style "textview"
+class "GtkStatusbar"	style "status"
+class "GtkCombo*"	style "combo"
+class "GtkSpinButton"	style "spin"
+
+widget_class "*<GtkMenu>.<GtkMenuItem>*"			style "menuitem"
+widget_class "*<GtkMenuBar>*"					style "menubar"
+
+widget "gtk-tooltip"						style "tooltip"
+
+widget_class "*Statusbar.*"					style "status"
+
+widget_class "*<GtkButton>.*"					style "button"
+widget_class "*GtkCheckButton.*"				style "radioCheck"
+widget_class "*GtkRadioButton.*"				style "radioCheck"
+widget_class "*GtkComboBox.*"					style "button"
+widget_class "*.<GtkComboBox>.<GtkCellView>"			style "combo"
+widget "*.gtk-combobox-popup-menu.*"				style "combo"
+
+widget_class "*.<GtkTreeView>.<GtkButton>"			style:highest "listheader"
+widget_class "*.<GtkTreeView>.<GtkButton>*"			style:highest "listheader"
+
+widget_class "*Toolbar.*"					style "toolbutton"
+
+#Nautilus Elementary
+widget_class "*Nautilus*NautilusPane*"				style "nautilus-sidebar"
+widget_class "*<NautilusPlacesSidebar>.GtkTreeView"		style "nautilus-sidebar"
+
+##PcManFM
+widget_class    "*FmPlacesView*"				style "nautilus-sidebar"
+widget_class	"*FmFolderView*"				style "pcman"
+widget_class    "*FmPathEntry*"					style "entry"
+
+##Gedit
+#inside scrolled number
+widget_class	"*GeditWindow.*GtkScrolledWindow.*"		style "insidescrlld"
+widget_class	"*GeditFileBrowserView"			style "tree"
+#Combo button on side panel
+widget_class	"*GtkComboBox.GtkCellView"			style "button"
+
+##Evolution
+#Shadow Flat on menubars
+widget_class	"EShellWindow.*BonoboDockBand*"			style "toolbutton"
+widget_class	"EShellWindow*.ECanvas"				style "noshdw"
+#Infolabel with bg color
+widget_class	"*EInfoLabel*"					style "evolution-info"
+#inside scrolledwindow
+widget_class	"*EMFolderBrowser*GtkScrolledWindow.*"		style "insidescrlld"
+#fix for button on RSS view
+widget_class	"*EMFolderBrowser*GtkScrolledWindow.*GtkButton*" style "button"
+#Evolution_search Entry
+widget_class	"*EIconEntry.*GtkEntry"				style "evo-entry"
+
+##Gimp
+#White entry
+widget_class	"GimpImageWindow*.GtkViewport.*"		style "gimp-viewport"
+widget_class	"GimpImageWindow*.GtkViewport.*GtkCombo*.*"		style "combo"
+
+##Midori
+#Progressbar
+widget_class 	"MidoriBrowser.*GtkAlignment.*GtkEntry"		style "midori-progress"
+widget_class 	"MidoriBrowser.*<GtkTreeView>.<GtkButton>"	style "default"
+#Close Tab Button
+#widget_class "*MidoriBrowser.*Notebook.*GtkButton"		style "buttonfull"
+
+##Emesene
+#Fix for username and personal message Button
+widget_class "*GtkHBox.GtkHBox.GtkVBox.GtkHBox.GtkButton*"	style "toolbutton"

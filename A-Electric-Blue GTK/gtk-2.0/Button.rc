@@ -1,0 +1,93 @@
+style "button" = "default"
+{	
+	fg[PRELIGHT]	= "#E0E0E0"
+	text[PRELIGHT]	= "#E0E0E0"
+	fg[NORMAL]	= "#E0E0E0"
+	text[NORMAL]	= "#E0E0E0"
+	fg[ACTIVE]	= "#E0E0E0"
+	text[ACTIVE]	= "#E0E0E0"
+
+
+	engine "pixmap"
+	{
+		image
+		{
+			function	= BOX
+			detail		= "buttondefault"
+			file		= "Images/null.png"
+		}	
+	
+		image
+		{
+			function	= VLINE
+			file		= "Images/null.png"
+			border		= {1, 1, 1, 1}
+		}
+
+		image
+		{
+			function	= FOCUS
+			file		= "Images/null.png"
+			border		= {4,4,4,4}
+		}
+		image
+		{
+			function	= BOX
+			state		= NORMAL
+			file		= "Images/Buttons/button.png"
+			border		= { 8, 8, 8, 8 }
+			stretch		= TRUE
+		}
+
+		image
+		{
+			function	= BOX
+			state		= PRELIGHT
+			file		= "Images/Buttons/button.png"
+			border		= { 8, 8, 8, 8 }
+			stretch		= TRUE
+		}
+
+		image
+		{
+			function	= BOX
+			state		= ACTIVE
+			file		= "Images/Buttons/button-pressed.png"
+			stretch		= TRUE
+			border		= { 8, 8, 8, 8 }
+			stretch		= TRUE
+		}
+
+		image
+		{
+			function	= BOX
+			state		= INSENSITIVE
+			file		= "Images/Buttons/button-ins.png"
+			border		= { 6, 6, 6, 6 }
+			stretch		= TRUE
+		}
+
+		image
+		{
+			function	= ARROW
+			recolorable	= TRUE
+			file		= "Images/null.png"
+			overlay_file	= "Images/down.png"
+			overlay_stretch	= FALSE
+			arrow_direction	= DOWN
+		}
+	}
+}
+
+style "toolbutton"
+{
+	fg[NORMAL] = @fg_color
+	text[NORMAL]	= @text_color
+	engine "pixmap"
+	{
+		image
+		{
+			function	= SHADOW
+		}
+	}
+}

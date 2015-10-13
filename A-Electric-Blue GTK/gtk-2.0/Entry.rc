@@ -1,0 +1,33 @@
+style "entry"
+{
+	ythickness	= 2	
+	xthickness	= 2
+	
+	#base[NORMAL] = @bg_color
+
+	engine "pixmap"
+	{
+		image
+		{
+			function	= SHADOW
+			file		= "Images/Entries/entry.png"
+			border		= {10,10,10,10}
+			shadow		= IN
+		}
+		
+		image
+		{
+			function	= FLAT_BOX
+			file		= "Images/Entries/box.png"
+			border		= {10,10,10,10}
+			stretch		= TRUE
+		}
+		
+		image
+		{
+			function	= FOCUS
+			file		= "Images/null.png"
+			stretch		= TRUE
+		}
+	}
+}

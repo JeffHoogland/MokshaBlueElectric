@@ -1,0 +1,198 @@
+style "scrollbar"
+{	
+	GtkScrollbar ::slider-width = 16
+	GtkScrollbar ::stepper-size = 16
+	GtkScrollbar   ::min-slider-length    = 30
+	GtkScrollbar   ::activate-slider      = 1
+	engine "pixmap"
+	{
+	##Background
+		image
+		{
+		function	= BOX
+		recolorable	= TRUE
+		file		= "Images/Scrollbars/backV.png"
+		border		= { 1, 1, 1,1 }
+		stretch		= TRUE
+		orientation	= VERTICAL
+		}
+		
+		image
+		{
+		function	= BOX
+		recolorable	= TRUE
+		file		= "Images/Scrollbars/backH.png"
+		stretch		= TRUE
+		border		= { 1, 1, 1,1 }
+		orientation	= HORIZONTAL
+		}
+	##Sliders
+		image 
+		{
+		function	= SLIDER
+		recolorable	= TRUE
+		state		= NORMAL
+		file		= "Images/Scrollbars/scroll1.png" 
+		border		= { 5, 5, 5, 5}
+		stretch		= TRUE
+		}
+
+		image 
+		{
+		function	= SLIDER
+		recolorable	= TRUE
+		state		= ACTIVE
+		file		= "Images/Scrollbars/scroll2.png" 
+		border		= { 5, 5, 5, 5}
+		stretch		= TRUE
+		}
+
+		image 
+		{
+		function	= SLIDER
+		recolorable	= TRUE
+		state		= PRELIGHT
+		file		= "Images/Scrollbars/scroll1.png" 
+		border		= { 5, 5, 5, 5}
+		stretch		= TRUE
+		}
+
+		image 
+		{
+		function	= SLIDER
+		recolorable	= TRUE
+		state		= INSENSITIVE
+		file		= "Images/Scrollbars/scroll1.png" 
+		border		= { 5, 5, 5, 5}
+		stretch		= TRUE
+		}
+	##Stepper
+		image
+		{
+		function = STEPPER
+		file = "Images/Scrollbars/left1.png"
+		state = NORMAL		
+		arrow_direction = LEFT
+		}
+
+		image
+		{
+		function = STEPPER
+		file = "Images/Scrollbars/left1.png"
+		state = PRELIGHT
+		arrow_direction = LEFT
+		}
+
+		image
+		{
+		function = STEPPER
+		file = "Images/Scrollbars/left2.png"
+		state = ACTIVE
+		arrow_direction = LEFT
+		}
+
+		image
+		{
+		function = STEPPER
+		file = "Images/Scrollbars/left1.png"
+		state = INSENSITIVE
+		arrow_direction = LEFT
+		}
+	
+		image
+		{
+		function = STEPPER
+		file = "Images/Scrollbars/right1.png"
+		state = NORMAL
+		arrow_direction = RIGHT
+		}
+
+		image
+		{
+		function = STEPPER
+		file = "Images/Scrollbars/right1.png"
+		state = PRELIGHT
+		arrow_direction = RIGHT
+		}
+
+		image
+		{
+		function = STEPPER
+		file = "Images/Scrollbars/right2.png"
+		state = ACTIVE
+		arrow_direction = RIGHT
+		}
+
+		image
+		{
+		function = STEPPER
+		file = "Images/Scrollbars/right1.png"
+		state = INSENSITIVE
+		arrow_direction = RIGHT
+		}
+
+		image
+		{
+		function = STEPPER
+		file = "Images/Scrollbars/up1.png"
+		state = NORMAL
+		arrow_direction = UP
+		}
+	
+		image
+		{
+		function = STEPPER
+		file = "Images/Scrollbars/up1.png"
+		state = PRELIGHT
+		arrow_direction = UP
+		}
+
+		image
+		{
+		function = STEPPER
+		file = "Images/Scrollbars/up2.png"
+		state = ACTIVE
+		arrow_direction = UP
+		}
+
+		image
+		{
+		function = STEPPER
+		file = "Images/Scrollbars/up1.png"
+		state = INSENSITIVE
+		arrow_direction = UP
+		}
+
+		image
+		{
+		function = STEPPER
+		file = "Images/Scrollbars/down1.png"
+		state = NORMAL
+		arrow_direction = DOWN
+		}
+
+		image
+		{
+		function = STEPPER
+		file = "Images/Scrollbars/down1.png"
+		state = PRELIGHT
+		arrow_direction = DOWN
+		}
+
+		image
+		{
+		function = STEPPER
+		file = "Images/Scrollbars/down2.png"
+		state = ACTIVE
+		arrow_direction = DOWN
+		}
+	
+		image
+		{
+		function = STEPPER
+		file = "Images/Scrollbars/down1.png"
+		state = INSENSITIVE
+		arrow_direction = DOWN
+		}
+	}
+}
