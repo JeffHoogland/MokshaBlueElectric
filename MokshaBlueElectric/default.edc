@@ -46,6 +46,16 @@
  *
  * FIXME: this is bad. namespacing! FIXME!
  */
+
+data {
+	item: "theme/name" 		"electricblue";
+	item: "theme/version"	"0.1.0";
+	item: "theme/author"	"Bodhi Team";
+	item: "theme/license"	"BSD Artistic License";
+	item: "gtk-theme"       "A-Electric-Blue GTK";
+	item: "version"         "110";
+}
+ 
 #if 0
 spectra {
    spectrum {
