@@ -55,7 +55,11 @@ data {
 	item: "gtk-theme"       "A-Electric-Blue GTK";
 	item: "version"         "110";
 }
- 
+
+collections {
+#include "mokshapreview.edc"
+}
+
 #if 0
 spectra {
    spectrum {
