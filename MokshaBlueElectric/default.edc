@@ -32577,6 +32577,7 @@ target: "region";
                   size: 11;
                   align: 0.0 0.5;
                   min: 1 1;
+                  ellipsis: -1;
                   text_class: "fileman_typebuf";
                }
             }
@@ -33269,7 +33270,7 @@ target: "region";
                color: 100 100 100 255;
                text {
                   font: "Sans:style=Bold";
-                  size: 9;
+                  size: 11;
                   min: 0 1;
                   align: 0.0 1.0;
                   text_class: "fileman_typebuf";
@@ -33297,11 +33298,11 @@ target: "region";
                   /* to_x: "e.swallow.icons"; */
                }
                rel2.offset: -10 -1;
-               color: 200 200 200 255;
+               color: 100 100 100 255;
                color3: 0 0 0 0;
                text {
                   font: "Sans";
-                  size: 9;
+                  size: 10;
                   min: 0 1;
                   align: 1.0 0.0;
                   text_class: "fileman_icon";
@@ -33407,7 +33408,7 @@ target: "region";
                fixed: 0 1;
                rel1.to: "e.text.label";
                rel2.to: "e.text.label";
-               color: 200 200 200 255;
+               color: 100 100 100 255;
                text {
                   font: "Sans:style";
                   text_source: "e.text.label";
@@ -33460,8 +33461,8 @@ target: "region";
                visible: 0;
                color: 245 245 245 255;
                text {
-                  font: "Sans:style=Bold";
-                  size: 9;
+                  font: "Sans";
+                  size: 10;
                   min: 0 1;
                   align: 0.5 0.5;
                   text_class: "fileman_icon";
@@ -33752,7 +33753,7 @@ target: "region";
                rel2 {
                   to: "base";
                   relative: 1.0 1.0;
-                  offset: -3  -11;
+                  offset: -4  -20;
                }
             }
          }
@@ -33815,10 +33816,10 @@ target: "region";
             description {
                state: "default" 0.0;
                rel1 {
-                  offset: 2 -12;
+                  offset: 2 -13;
                   relative: 0.0 1.0;
                }
-               rel2.offset: -2 -4;
+               rel2.offset: -2 -13;
                color3: 20 20 20 60;
                color: 255 255 255 255;
                text {
@@ -33833,10 +33834,10 @@ target: "region";
                state: "selected" 0.0;
 	       inherit: "default" 0.0;
                rel1 {
-                  offset: 2 -12;
+                  offset: 2 -13;
                   relative: 0.0 1.0;
                }
-               rel2.offset: -2 -4;
+               rel2.offset: -2 -13;
                color: 250 250 250 255;
                color3: 20 20 20 40;
             }
