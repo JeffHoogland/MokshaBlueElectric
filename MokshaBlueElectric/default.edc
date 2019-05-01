@@ -14221,6 +14221,7 @@ group { name: "e/modules/clock/digital";
       name: "e/modules/mixer/main";
       images {
          image: "mixer.png" COMP;
+         image: "mixer_mute.png" COMP;
          image: "mixer_low_left.png" COMP;
          image: "mixer_low_right.png" COMP;
          image: "mixer_med_left.png" COMP;
@@ -14352,6 +14353,24 @@ group { name: "e/modules/clock/digital";
             }
          }
          part {
+            name: "speaker_mute";
+            type: IMAGE;
+            mouse_events: 0;
+            description {
+               state: "default" 0.0;
+               aspect: 1 1;
+               aspect_preference: BOTH;
+               image.normal: "mixer.png";
+            }
+            description {
+               state: "active" 0.0;
+               aspect: 1 1;
+               aspect_preference: BOTH;
+               image.normal: "mixer_mute.png";
+            }
+         }
+         
+         part {
             name: "over";
             type: RECT;
             description {
@@ -14367,13 +14386,13 @@ group { name: "e/modules/clock/digital";
             name: "mute";
             action: STATE_SET "active" 0.0;
             transition: LINEAR 0.3;
-            target: "mute";
+            target: "speaker_mute";
          }
          program {
             name: "unmute";
             action: STATE_SET "default" 0.0;
             transition: LINEAR 0.2;
-            target: "mute";
+            target: "speaker_mute";
          }
          program {
             name: "left_none";
