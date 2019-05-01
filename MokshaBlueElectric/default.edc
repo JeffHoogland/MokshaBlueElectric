@@ -10140,6 +10140,7 @@ group { name: "e/modules/clock/digital";
                 text_class: "module_small";
                 align: 0.5 0.5;
                 min: 0 1;
+                ellipsis: -1;
              }
              fixed: 0 1;
              visible: 0;
@@ -10593,7 +10594,7 @@ group { name: "e/modules/clock/digital";
             scale: 1;
             description { state: "default" 0.0;
                align: 0.5 0.5;
-               color: 0 0 0 64;
+               color: 100 100 100 255;
                color3: 255 255 255 255;
                rel1.offset: 3 3;
                rel2.offset: -3 -3;
@@ -10603,6 +10604,7 @@ group { name: "e/modules/clock/digital";
                   align: 0.5 0.5;
                   size: 8;
                   min: 1 1;
+                  ellipsis: -1;
                   text_class: "module_small";
                }
             }
@@ -10667,6 +10669,7 @@ group { name: "e/modules/clock/digital";
                   align: 0.5 0.5;
                   size: 8;
                   min: 1 1;
+                  ellipsis: -1;
                   text_class: "module_small";
                }
             }
