@@ -38150,6 +38150,7 @@ target: "region";
       images {
          image: "bt_base1.png" COMP;
          image: "bt_base2.png" COMP;
+         image: "bt_dis_base2.png" COMP;
          image: "bt_hilight.png" COMP;
          image: "bt_shine.png" COMP;
          image: "bt_glow.png" COMP;
@@ -38162,8 +38163,8 @@ target: "region";
             mouse_events: 1;
             description { state: "default" 0.0;
                image {
-                  normal: "bt_dis_base.png";
-                  border: 4 4 4 4;
+                  normal: "bt_dis_base2.png";
+                  border: 7 7 7 7;
                }
             }
             description { state: "clicked" 0.0;
