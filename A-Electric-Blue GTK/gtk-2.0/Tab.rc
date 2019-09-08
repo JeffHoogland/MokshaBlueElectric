@@ -107,13 +107,14 @@ style "tab"
 	}
 }
 
-style "tabtext" = "default"
+style "tabtext"
 {	
 
-	fg[ACTIVE]       	= @fg_tabcolor
-	fg[NORMAL]		= @fg_selected_tabcolor
+	fg[NORMAL]		= @fg_tabcolor 
+	fg[ACTIVE]		= @fg_color
 
 }
+
 widget_class "*<GtkNotebook>*.*<GtkLabel>"			style "tabtext"
 widget_class "*<GtkNotebook>.*.*.<GtkLabel>"			style "default"
 widget_class "*.<GtkNotebook>.*<GtkEventBox>*<GtkLabel>" 	style "tabtext"
