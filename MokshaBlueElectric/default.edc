@@ -10130,29 +10130,28 @@ group { name: "e/modules/clock/digital";
 #undef DIGITC
 
        part { name: "e.text.today"; type: TEXT;
-          effect: GLOW;
           scale: 1;
           description { state: "default" 0.0;
              rel1.relative: 0.0 1.0;
              rel1.offset: 0 1;
              rel2.offset: -1 1;
              align: 0.5 1.0;
-             color: 255 255 255 255;
-             color2: 0 0 0 24;
-             color3: 0 0 0 0;
-             text { font: "Sans"; size: 8;
+             color_class: "calendar_today";
+             text { font: FN; size: 8;
                 text_class: "module_small";
                 align: 0.5 0.5;
+                text: "Tod, 12/30/2011";
                 min: 0 1;
-                ellipsis: -1;
+                size_range: 6 10;  
+                fit: 1 0;
              }
              fixed: 0 1;
-             visible: 0;
           }
           description { state: "date" 0.0;
              inherit: "default" 0.0;
-             visible: 1;
-             fixed: 1 1;
+             fixed: 0 1;
+             text.min: 1 1;
+             text.ellipsis: -1;
           }
        }
                        
