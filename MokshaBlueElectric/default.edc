@@ -53,6 +53,7 @@ data {
 	item: "theme/author"	"Bodhi Team";
 	item: "theme/license"	"BSD Artistic License";
 	item: "gtk-theme"       "A-Electric-Blue GTK";
+	item: "icon-theme"      "Faenza";
 	item: "version"         "110";
 }
 
@@ -9791,7 +9792,7 @@ group { name: "e/modules/clock/digital";
          for (i = 0; i < 14; i += 2) {
             set_state(parts[i], "custom", 0.0);
          }
-         if (mul == 4)
+         if (mul == 3)
             set_min_size(tot * mul, 16);
          else
             set_min_size(tot * 1.4 * mul, 16);
