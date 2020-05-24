@@ -42,20 +42,16 @@
      id="namedview12"
      showgrid="false"
      inkscape:zoom="4.9166667"
-     inkscape:cx="1.4237288"
+     inkscape:cx="-36.101695"
      inkscape:cy="24"
      inkscape:window-x="38"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg10" />
   <path
-     d="M41.09 10.45L38.32 7.09C37.76 6.43 36.93 6 36 6L12 6C11.07 6 10.24 6.43 9.69 7.09L6.92 10.45C6.34 11.15 6 12.03 6 13l0 25c0 2.21 1.79 4 4 4l28 0c2.21 0 4-1.79 4-4l0-25c0-.97-.34-1.85-.91-2.55z"
-     id="path2"
-     style="fill:#828eab;fill-opacity:1" />
-  <path
-     d="m10.25 10l1.63-2 24 0 1.87 2-27.5 0z"
-     fill="#fff"
-     id="path4" />
+     style="fill:#828eab;fill-opacity:1"
+     d="M 12 6 C 11.07 6 10.239453 6.4298437 9.6894531 7.0898438 L 6.9199219 10.449219 C 6.3399219 11.149219 6 12.03 6 13 L 6 38 C 6 40.21 7.79 42 10 42 L 38 42 C 40.21 42 42 40.21 42 38 L 42 13 C 42 12.03 41.659844 11.149219 41.089844 10.449219 L 38.320312 7.0898438 C 37.760312 6.4298437 36.93 6 36 6 L 12 6 z M 11.880859 8 L 35.880859 8 L 37.75 10 L 10.25 10 L 11.880859 8 z "
+     id="path2" />
   <text
      fill="#fff"
      x="23.966894"
