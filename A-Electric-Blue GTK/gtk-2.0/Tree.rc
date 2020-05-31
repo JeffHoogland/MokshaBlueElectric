@@ -7,8 +7,8 @@ style "tree"
 
 	fg[SELECTED]	= @fg_selected_tabcolor
 	fg[ACTIVE]	= @fg_selected_tabcolor
-	text[SELECTED]	= @fg_selected_tabcolor
-	text[ACTIVE]	= @fg_selected_tabcolor
+	text[SELECTED]	= @tooltip_bg_color 
+	text[ACTIVE]	= @tooltip_bg_color 
 	bg[NORMAL]	= "#030351"
 	base[NORMAL]	= @base_color
 	engine "pixmap"
@@ -414,7 +414,7 @@ style "listheader"
 
 	bg[NORMAL]	= "#ececec"
 
-	fg[NORMAL]	= @fg_selected_tabcolor
+	fg[NORMAL]	= @tooltip_bg_color 
 	fg[PRELIGHT]	= @fg_selected_tabcolor
 	fg[ACTIVE]	= @fg_selected_tabcolor
 
