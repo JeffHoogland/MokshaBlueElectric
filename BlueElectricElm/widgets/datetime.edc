@@ -134,7 +134,7 @@ group { name: "elm/datetime/base/default";
             }
             color: 255 255 255 255;
          }
-         description { state: "enable" 0.0;
+         description { state: "visible" 0.0;
             inherit: "default" 0.0;
             color: 255 255 255 127;
          }
@@ -160,7 +160,7 @@ group { name: "elm/datetime/base/default";
       }
    }
    programs {
-      program { name: "disble_datetime";
+      program { name: "disable_datetime";
          signal: "elm,state,disabled";
          source: "elm";
          action: STATE_SET "visible" 0.0;

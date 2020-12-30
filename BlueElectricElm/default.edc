@@ -325,7 +325,7 @@ collections {
 #include "widgets/player.edc"
 #include "widgets/pointer.edc"
 #include "widgets/popup.edc"
-#include "widgets/progressbar.edc"
+//~ #include "widgets/progressbar.edc"
 #include "widgets/radio.edc"
 #include "widgets/scroller.edc"
 #include "widgets/segment_control.edc"
@@ -14460,13 +14460,13 @@ target: "e.swallow.content";
          program {
 signal: "e,toolbar,left"; source: "e";
 action: STATE_SET "tb_left" 0.0;
-target: "e.swallow.toolbar";
+//~ target: "e.swallow.toolbar";
 target: "region";
                }
          program {
 signal: "e,toolbar,right"; source: "e";
 action: STATE_SET "tb_right" 0.0;
-target: "e.swallow.toolbar";
+//~ target: "e.swallow.toolbar";
 target: "region";
                }
          program {
@@ -23029,7 +23029,7 @@ target: "region";
             source: "e";
             action: STATE_SET "combo" 0.0;
             target: "e.swallow.icon";
-            target: "e.text.label";
+            //~ target: "e.text.label";
          }
          program {
             name: "disable";
@@ -24549,7 +24549,7 @@ target: "region";
             target: "bg";
             target: "fg1";
             target: "fg2";
-            target: "e.text.label";
+            //~ target: "e.text.label";
          }
          program {
             name: "go_passive";
@@ -24559,7 +24559,7 @@ target: "region";
             target: "bg";
             target: "fg1";
             target: "fg2";
-            target: "e.text.label";
+            //~ target: "e.text.label";
             transition: LINEAR 0.1;
          }
       }
@@ -24729,7 +24729,7 @@ target: "region";
             target: "bg";
             target: "fg1";
             target: "fg2";
-            target: "e.text.label";
+            //~ target: "e.text.label";
          }
          program {
             name: "go_passive";
@@ -24739,7 +24739,7 @@ target: "region";
             target: "bg";
             target: "fg1";
             target: "fg2";
-            target: "e.text.label";
+            //~ target: "e.text.label";
             transition: LINEAR 0.1;
          }
       }
@@ -27370,7 +27370,7 @@ target: "region";
             name: "h1_down1";
             signal: "mouse,down,1";
             source: "h1";
-            action: STATE_SET "clicked" 0.0;
+            action: STATE_SET "default" 0.0;
             target: "h1";
          }
          program {
@@ -27402,7 +27402,7 @@ target: "region";
             name: "h2_down1";
             signal: "mouse,down,1";
             source: "h2";
-            action: STATE_SET "clicked" 0.0;
+            action: STATE_SET "default" 0.0;
             target: "h2";
          }
          program {
@@ -27434,7 +27434,7 @@ target: "region";
             name: "v1_down1";
             signal: "mouse,down,1";
             source: "v1";
-            action: STATE_SET "clicked" 0.0;
+            action: STATE_SET "default" 0.0;
             target: "v1";
          }
          program {
@@ -27466,7 +27466,7 @@ target: "region";
             name: "v2_down1";
             signal: "mouse,down,1";
             source: "v2";
-            action: STATE_SET "clicked" 0.0;
+            action: STATE_SET "default" 0.0;
             target: "v2";
          }
          program {
@@ -31282,8 +31282,8 @@ target: "region";
             target: "icon_box_shadow";
             target: "icon_box";
             target: "base";
-            target: "icon_zoom";
-            target: "e.swallow.content";
+            //~ target: "icon_zoom";
+            //~ target: "e.swallow.content";
             target: "events";
             after: "thumb_gen2";
          }
@@ -31563,8 +31563,8 @@ target: "region";
             target: "icon_box_shadow";
             target: "icon_box";
             target: "base";
-            target: "icon_zoom";
-            target: "e.swallow.content";
+            //~ target: "icon_zoom";
+            //~ target: "e.swallow.content";
             target: "events";
             target: "theme";
             after: "thumb_gen2";
@@ -31776,8 +31776,8 @@ target: "region";
             target: "icon_box_shadow";
             target: "icon_box";
             target: "base";
-            target: "icon_zoom";
-            target: "e.swallow.content";
+            //~ target: "icon_zoom";
+            //~ target: "e.swallow.content";
             target: "events";
             after: "thumb_gen2";
          }
@@ -32653,7 +32653,7 @@ target: "region";
             name: "show_list";
             signal: "e,state,list_show";
             source: "e";
-            action: STATE_SET "visible" 0.0;
+            action: STATE_SET "default" 0.0;
             target: "base";
          }
          program {
@@ -32668,7 +32668,7 @@ target: "region";
             name: "show_entry";
             signal: "e,state,entry_show";
             source: "e";
-            action: STATE_SET "visible" 0.0;
+            action: STATE_SET "default" 0.0;
             target: "input_base";
          }
          program {
@@ -38801,6 +38801,11 @@ target: "region";
                   description
                     {
                        state: "default" 0.0;
+                       color: 255 255 255 255;
+                    }
+                  description
+                    {
+                       state: "disabled" 0.0;
                        color: 255 255 255 0;
                     }
                }
