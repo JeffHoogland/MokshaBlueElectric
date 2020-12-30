@@ -10721,7 +10721,7 @@ group { name: "e/modules/clock/digital";
             }
             description { state: "weekend" 0.0;
                inherit: "default" 0.0;
-               color: 255 0 0 64;
+               color: 0 0 255 64;
             }
          }
          part { name: "day"; type: RECT;
