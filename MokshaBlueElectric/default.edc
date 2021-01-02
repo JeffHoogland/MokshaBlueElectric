@@ -57,6 +57,8 @@ data {
 	item: "version"         "110";
 }
 
+externals.external: "elm";
+
 collections {
 #include "mokshapreview.edc"
 }
@@ -300,6 +302,59 @@ collections {
 /* begin the collection of edje groups that are in this file */
 
 #include "shelf.edc"
+
+//All the ELM widgets
+#include "widgets/actionslider.edc"
+#include "widgets/bg.edc"
+#include "widgets/border.edc"
+#include "widgets/bubble.edc"
+#include "widgets/button.edc"
+#include "widgets/calendar.edc"
+#include "widgets/check.edc"
+#include "widgets/clock.edc"
+#include "widgets/colorselector.edc"
+#include "widgets/conformant.edc"
+#include "widgets/ctxpopup.edc"
+#include "widgets/datetime.edc"
+#include "widgets/dayselector.edc"
+#include "widgets/diskselector.edc"
+#include "widgets/entry.edc"
+#include "widgets/fileselector.edc"
+#include "widgets/flipselector.edc"
+#include "widgets/frame.edc"
+#include "widgets/gengrid.edc"
+#include "widgets/genlist.edc"
+#include "widgets/hover.edc"
+#include "widgets/icon.edc"
+#include "widgets/index.edc"
+#include "widgets/label.edc"
+#include "widgets/layout.edc"
+#include "widgets/list.edc"
+#include "widgets/map.edc"
+#include "widgets/menu.edc"
+#include "widgets/multibuttonentry.edc"
+#include "widgets/naviframe.edc"
+#include "widgets/notify.edc"
+#include "widgets/panel.edc"
+#include "widgets/panes.edc"
+#include "widgets/photo.edc"
+#include "widgets/photocam.edc"
+#include "widgets/player.edc"
+#include "widgets/pointer.edc"
+#include "widgets/popup.edc"
+//~ #include "widgets/progressbar.edc"
+#include "widgets/radio.edc"
+#include "widgets/scroller.edc"
+#include "widgets/segment_control.edc"
+#include "widgets/separator.edc"
+#include "widgets/slider.edc"
+#include "widgets/slideshow.edc"
+#include "widgets/spinner.edc"
+#include "widgets/thumb.edc"
+#include "widgets/toolbar.edc"
+#include "widgets/tooltip.edc"
+#include "widgets/video.edc"
+#include "widgets/win.edc"
 
 
 /////////////////////////////////////////////////////////////////////////////
@@ -25152,10 +25207,10 @@ target: "region";
 
    group { name: "e/widgets/entry/text";
       styles {
-         style { name: "entry_textblock_style";
+         style { name: "entry_textblock_style_m";
             base: "font=Sans font_size=10 color=#000 text_class=entry color_classs=entry_text";
          }
-         style { name: "entry_textblock_disabled_style";
+         style { name: "entry_textblock_disabled_style_m";
             base: "font=Sans font_size=10 color=#000 text_class=entry color_class=entry_text_disabled";
          }
       }
@@ -25177,7 +25232,7 @@ target: "region";
                color_class: "entry_text";
                text {
                   text: "";
-                  style: "entry_textblock_style";
+                  style: "entry_textblock_style_m";
                   min: 1 1;
                   align: 0.0 0.5;
                }
@@ -25185,7 +25240,7 @@ target: "region";
             description {
                state: "disabled" 0.0;
                inherit: "default" 0.0;
-               text.style: "entry_textblock_disabled_style";
+               text.style: "entry_textblock_disabled_style_m";
                color_class: "entry_text_disabled";
             }
          }
@@ -26483,7 +26538,7 @@ target: "region";
       name: "e/widgets/textblock";
       styles {
          style {
-            name: "textblock_style";
+            name: "textblock_style_m";
             base: "font=Sans font_size=10 align=left color=#000 style=shadow shadow_color=#ffffff80 wrap=word";
             tag: "title" "+ font=Sans:style=Bold font_size=12 style=soft_shadow color=#fff shadow_color=#00000021";
             tag: "hilight" "+ font=Sans:style=Bold style=glow color=#fff glow2_color=#333333be glow_color=#0000005a";
@@ -26503,7 +26558,7 @@ target: "region";
                rel1.offset: 4 4;
                rel2.offset: -5 -5;
                text {
-                  style: "textblock_style";
+                  style: "textblock_style_m";
                   min: 1 1;
                }
             }
